@@ -1,0 +1,360 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/****** CSS RESET START ******/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****** CSS RESET END ******/
+
+h2 {
+  box-sizing: border-box;
+  margin-left: 8px;
+  color: rgb(255, 68, 34);
+  cursor: pointer;
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+  font-stretch: 100%;
+  font-weight: 700;
+  letter-spacing: -0.42px;
+  line-height: 30.8px;
+  outline-color: rgb(255, 68, 34);
+  outline-style: none;
+  text-rendering: optimizelegibility;
+  vertical-align: baseline;
+}
+
+h2::after {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+  background-size: 16px 16px;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin-left: 4px;
+  position: relative;
+  top: 0;
+  width: 16px;
+}
+
+h2:hover {
+  color: black;
+}
+
+h2:hover::after {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23000" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+  background-size: 16px 16px;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin-left: 4px;
+  position: relative;
+  top: 0;
+  width: 16px;
+}
+
+/****** NAVBAR START ******/
+header {
+  box-sizing: border-box;
+  border: 1px solid blue;
+  height: 48px;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  top: 0;
+  height: 48px;
+  background-color: white;
+}
+
+#logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 106px;
+  height: 48px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(204, 0, 153),
+    rgb(255, 68, 34) 85%
+  );
+  cursor: pointer;
+}
+
+#logo {
+  box-sizing: border-box;
+  color: rgb(255, 68, 34);
+  font-size: 14px;
+  font-stretch: 100%;
+  font-weight: 400;
+  height: 16px;
+  line-height: 21px;
+  max-width: 100%;
+}
+
+#icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-icon {
+  font-size: 25px;
+  padding: 11.5px;
+  border-left: 1px solid rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+.mdi-menu {
+  color: rgb(255, 68, 34);
+}
+
+.mdi-magnify {
+  color: #bbb;
+}
+
+.mdi-magnify:hover {
+  color: #888;
+}
+
+/****** NAVBAR END ******/
+
+/****** MAIN ARTICLES START ******/
+
+#main-articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: auto;
+  row-gap: 10px;
+  border: 1px solid red;
+  padding: 10px;
+  height: 620px;
+}
+
+.main-article {
+  border: 1px solid black;
+}
+
+@media (min-width: 768px) {
+  #main-articles {
+    display: grid;
+    grid-template-areas:
+      'main-article-1 main-article-1 main-article-2'
+      'main-article-1 main-article-1 main-article-3';
+    column-gap: 10px;
+    height: 410px;
+    border: 1px solid red;
+  }
+
+  #main-article-1 {
+    grid-area: main-article-1;
+  }
+
+  #main-article-2 {
+    grid-area: main-article-2;
+  }
+
+  #main-article-3 {
+    grid-area: main-article-3;
+  }
+}
+
+@media (min-width: 1024px) {
+  #main-articles {
+    display: grid;
+    grid-template-areas:
+      'main-article-1 main-article-1 main-article-2'
+      'main-article-1 main-article-1 main-article-3';
+    column-gap: 10px;
+    height: 510px;
+    border: 1px solid red;
+  }
+
+  #main-article-1 {
+    grid-area: main-article-1;
+  }
+
+  #main-article-2 {
+    grid-area: main-article-2;
+  }
+
+  #main-article-3 {
+    grid-area: main-article-3;
+  }
+}
+
+/****** MAIN ARTICLES END ******/
+
+/****** LATEST ARTICLES START ******/
+
+#latest-section {
+  margin-top: 50px;
+}
+
+#latest-articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.latest-article {
+  height: 72px;
+  border: 1px solid green;
+  margin: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  #latest-articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .latest-article {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #latest-articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .latest-article {
+    height: 250px;
+  }
+}
