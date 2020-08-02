@@ -252,15 +252,17 @@ nav {
   cursor: pointer;
 }
 
-.mdi-menu {
+.fa-bars {
   color: rgb(255, 68, 34);
+  font-size: 20px;
 }
 
-.mdi-magnify {
+.fa-search {
   color: #bbb;
+  font-size: 20px;
 }
 
-.mdi-magnify:hover {
+.fa-search:hover {
   color: #777;
 }
 
@@ -542,20 +544,136 @@ nav {
 
 /****** LATEST FUNDING START ******/
 
+#fundings {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 15px;
+  margin: 10px;
+}
+
+.funding:last-child {
+  display: none;
+}
+
+.funding {
+  min-height: 220px;
+  background-color: rgb(254, 250, 248);
+}
+
 .funding-headline-div {
   display: flex;
-  height: 102px;
+  min-height: 102px;
   background-image: linear-gradient(
     to bottom,
-    rgb(255, 68, 34) 40%,
-    rgba(255, 68, 34, 0.08) 40% 100%
+    rgb(255, 68, 34) 45%,
+    rgba(255, 68, 34, 0.08) 45% 100%
   );
 }
 
+.funding-headline-div > div {
+  width: 68.1%;
+}
+
 .funding-headline-div img {
+  display: block;
   width: 65px;
   height: 65px;
   object-fit: cover;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.funding-headline-1 {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: 'Work Sans', serif;
+  font-size: 18px;
+  font-stretch: 100%;
+  font-weight: 600;
+  line-height: 22.5px;
+  margin-top: 10px;
+  margin-left: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 95%;
+}
+
+.funding-headline-2 {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-family: 'Work Sans', serif;
+  font-size: 18px;
+  font-stretch: 100%;
+  font-weight: 600;
+  line-height: 22.5px;
+  margin-top: 26px;
+  margin-left: 12px;
+}
+
+.funding-series {
+  margin-left: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
+  font-stretch: 100%;
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  line-height: 16.5px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.funding-tags {
+  padding-top: 18px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 68, 34, 0.25);
+}
+
+.funding-tags p span {
+  color: rgb(85, 85, 85);
+  cursor: pointer;
+  font-family: 'Work Sans', serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.funding-tags p span:hover {
+  color: black;
+}
+
+.funding-tags p i {
+  margin-right: 8px;
+}
+
+.funding-tags p:first-child {
+  margin-bottom: 6.5px;
+}
+
+.funder {
+  padding: 11px 18px;
+  color: rgb(85, 85, 85);
+  cursor: pointer;
+  font-family: 'Work Sans' serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.funder span {
+  color: rgb(170, 170, 170);
+  cursor: pointer;
+  font-family: 'Work Sans' serif;
+  font-size: 12px;
+  font-stretch: 100%;
+  font-weight: 400;
 }
 
 #funding-section h2 {
@@ -608,8 +726,15 @@ nav {
 }
 
 @media screen and (min-width: 1024px) {
+  #funding-section-headline {
+    display: flex;
+  }
+
   #funding-links {
+    margin-left: auto;
     display: inline-block;
+    align-self: center;
+    margin-right: 10px;
   }
 
   .funding-link {
@@ -641,23 +766,6 @@ nav {
   .latest-article-date {
     font-size: 13px;
   }
-}
-
-#fundings {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  row-gap: 15px;
-  margin: 10px;
-}
-
-.funding:last-child {
-  display: none;
-}
-
-.funding {
-  border: 1px solid black;
-  height: 230px;
 }
 
 @media screen and (min-width: 768px) {
