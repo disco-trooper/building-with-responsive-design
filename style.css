@@ -215,9 +215,11 @@ header {
   z-index: 10;
 }
 
-#big-logo-div,
-#nav-bars {
-  display: none;
+@media screen and (max-width: 767px) {
+  #big-logo-div,
+  #nav-bars {
+    display: none;
+  }
 }
 
 #logo-div {
