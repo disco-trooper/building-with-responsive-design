@@ -16,10 +16,119 @@
       src="https://kit.fontawesome.com/b39a2b6d31.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="desktop-nav">
+        <div id="big-logo-div">
+          <a href="http://seznam.cz"
+            ><img
+              id="big-logo"
+              alt="The Next Web"
+              src="https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg"
+          /></a>
+        </div>
+        <div id="nav-bars">
+          <div id="black-nav">
+            <a href="" class="black-nav-link">News</a>
+            <a href="" class="black-nav-link">Events &#9662;</a>
+            <a href="" class="black-nav-link">Business</a>
+            <a href="" class="black-nav-link">AMAs</a>
+            <a href="" class="black-nav-link">Spaces</a>
+            <a href="" class="black-nav-link">Terms & Conditions</a>
+            <a href="" class="black-nav-link">About</a>
+            <a href="" class="black-nav-link">Advertise</a>
+            <a href="" class="black-nav-link">Jobs</a>
+            <a href="" class="black-nav-link">Contact</a>
+          </div>
+          <div id="white-nav">
+            <a href="" class="white-nav-link">latest</a>
+            <a href="" class="white-nav-link">hard fork</a>
+            <a href="" class="white-nav-link">plugged</a>
+            <a href="" class="white-nav-link">readme</a>
+            <a href="" class="white-nav-link">growth quarters</a>
+            <a href="" class="white-nav-link">shift</a>
+            <a href="" class="white-nav-link">neural</a>
+          </div>
+        </div>
+      </nav>
+      <nav id="mobile-nav">
         <div id="logo-div">
           <a href="http://seznam.cz"
             ><img
@@ -603,17 +712,144 @@
       </div>
     </section>
     <section id="latest-deals-section">
-      <h2>Latest deals</h2>
+      <div id="latest-deals-section-headline">
+        <h2>Latest deals</h2>
+        <p>See all Deals</p>
+      </div>
       <div id="latest-deals">
-        <div class="latest-deal"></div>
-        <div class="latest-deal"></div>
-        <div class="latest-deal"></div>
-        <div class="latest-deal"></div>
-        <div class="latest-deal"></div>
-        <div class="latest-deal"></div>
-        <div class="latest-deal"></div>
-        <div class="latest-deal"></div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-1.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              FREE: Leadership & Management Diploma 4-Week Course
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$49</span
+              ><span class="new-price">$0</span>
+            </div>
+          </div>
+        </div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-2.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              StackSkills Unlimited: Lifetime Access
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$1495</span
+              ><span class="new-price">$59</span>
+            </div>
+          </div>
+        </div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-3.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              KeepSolid VPN Unlimited: Lifetime Subscription
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$199</span
+              ><span class="new-price">$39</span>
+            </div>
+          </div>
+        </div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-4.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              PIQO Powerful 1080p Mini Projector
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$799</span
+              ><span class="new-price">$279.99</span>
+            </div>
+          </div>
+        </div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-5.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              Inspireframe Website Mockups Lite Plan: Lifetime Subscription
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$240</span
+              ><span class="new-price">$39.99</span>
+            </div>
+          </div>
+        </div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-6.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              The Creative Writing eBook Self-Publishing Bundle
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$1990</span
+              ><span class="new-price">$39.99</span>
+            </div>
+          </div>
+        </div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-7.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              Ivacy VPN: Lifetime Subscription
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$1194</span
+              ><span class="new-price">$39.99</span>
+            </div>
+          </div>
+        </div>
+        <div class="latest-deal">
+          <img
+            class="latest-deal-image"
+            src="./assets/images/deal-8.jpg"
+            alt=""
+          />
+          <div>
+            <p class="latest-deal-headline">
+              The Ultimate Amazon FBA & Dropship Master Class Bundle
+            </p>
+            <div class="latest-deal-discount">
+              <span class="old-price">$1292</span
+              ><span class="new-price">$39.99</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <footer>
+      <div id="upper-footer"><a href="" class="footer-icon"></a><</div>
+      <div id="lower-footer"></div>
+    </footer>
   </body>
 </html>
