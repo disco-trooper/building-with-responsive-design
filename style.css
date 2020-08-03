@@ -200,9 +200,10 @@ header {
   box-sizing: border-box;
   height: 48px;
   z-index: 11;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
 }
 
-nav {
+#mobile-nav {
   position: fixed;
   display: flex;
   width: 100%;
@@ -266,6 +267,116 @@ nav {
   color: #777;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+
+  #mobile-nav {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+  }
+
+  #nav-bars {
+    height: 80px;
+    width: 100%;
+  }
+
+  #black-nav {
+    display: flex;
+    height: 32px;
+    width: 100%;
+    background-color: black;
+  }
+
+  #white-nav {
+    height: 48px;
+    width: 100%;
+  }
+
+  #black-nav a:first-child {
+    color: white;
+    margin-left: 18px;
+  }
+
+  #white-nav a:first-child {
+    margin-left: 6px;
+  }
+
+  #black-nav a:last-child {
+    padding-right: 20px;
+  }
+
+  .black-nav-link {
+    color: hsla(0, 0%, 100%, 0.6);
+    cursor: pointer;
+    font-family: 'Work Sans', serif;
+    font-size: 13px;
+    font-stretch: 100%;
+    font-weight: 400;
+    line-height: 32px;
+    text-decoration: none;
+    margin-left: 12px;
+  }
+
+  #black-nav a:nth-child(7) {
+    margin-left: auto;
+  }
+
+  .black-nav-link:hover {
+    color: white;
+  }
+
+  .white-nav-link {
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-stretch: 100%;
+    font-weight: 500;
+    letter-spacing: 0.56px;
+    line-height: 48px;
+    padding: 0 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  .white-nav-link:hover {
+    color: black;
+  }
+
+  #big-logo-div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 80px;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(204, 0, 153),
+      rgb(255, 68, 34) 85%
+    );
+    cursor: pointer;
+  }
+
+  #big-logo {
+    box-sizing: border-box;
+    color: rgb(255, 68, 34);
+    font-size: 14px;
+    font-stretch: 100%;
+    font-weight: 400;
+    height: 16px;
+    line-height: 21px;
+    max-width: 100%;
+  }
+}
+
 /****** NAVBAR END ******/
 
 /****** MAIN ARTICLES START ******/
@@ -273,11 +384,14 @@ nav {
 #main-articles {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-columns: auto;
   row-gap: 10px;
   padding: 10px;
   height: 620px;
+}
+
+#main-articles > * {
+  cursor: pointer;
 }
 
 #main-article-1 {
@@ -471,6 +585,7 @@ nav {
 
 .latest-article {
   display: flex;
+  cursor: pointer;
 }
 
 .latest-article div {
@@ -901,6 +1016,10 @@ nav {
   margin-bottom: 15px;
 }
 
+.most-popular {
+  cursor: pointer;
+}
+
 .most-popular-line {
   box-sizing: border-box;
   color: rgb(255, 255, 255);
@@ -1027,7 +1146,9 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 10px;
+    column-gap: 10px;
+    row-gap: 30px;
+    margin: 50px 15px 0 15px;
   }
 
   .section {
@@ -1053,6 +1174,7 @@ nav {
     display: grid;
     justify-content: center;
     margin: 0 auto;
+    margin-top: 60px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 10px;
@@ -1086,6 +1208,27 @@ nav {
   margin-left: 20px;
 }
 
+#latest-deals-section-headline {
+  display: flex;
+}
+
+#latest-deals-section-headline p {
+  align-self: center;
+  margin-left: auto;
+  margin-right: 20px;
+  color: rgb(255, 68, 34);
+  cursor: pointer;
+  font-family: 'Work Sans', serif;
+  font-size: 14px;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+#latest-deals-section-headline p:hover {
+  color: black;
+}
+
 #latest-deals {
   margin: 20px;
   display: grid;
@@ -1094,13 +1237,73 @@ nav {
   row-gap: 15px;
 }
 
+.latest-deal-image {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.latest-deal-headline {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-family: 'Work Sans', serif;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.latest-deal-headline:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 68, 34, 0.25);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  color: rgb(255, 68, 34);
+}
+
 .latest-deal {
-  border: 1px solid green;
+  display: flex;
+  cursor: pointer;
+}
+
+.latest-deal div {
+  margin-top: 2px;
+}
+
+.old-price {
+  color: rgb(170, 170, 170);
+  display: inline;
+  font-family: 'Work Sans', serif;
+  font-size: 12.5px;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 18px;
+  margin-right: 6px;
+  text-align: left;
+  text-decoration-color: rgb(170, 170, 170);
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+}
+
+.new-price {
+  color: rgba(85, 85, 85, 0.9);
+  display: inline;
+  font-family: 'Work Sans', serif;
+  font-size: 14.5px;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 @media screen and (max-width: 767px) {
   .latest-deal {
     height: 72px;
+    margin-bottom: 12px;
   }
 }
 
@@ -1115,11 +1318,27 @@ nav {
   .latest-deal {
     min-height: 217px;
     height: 25vw;
-    max-height: 242px;
+    max-height: 222px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .latest-deal-image {
+    width: 100%;
+    min-height: 115px;
+    height: 14vw;
+    max-height: 158px;
+    margin-bottom: 5px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  #latest-deals-section {
+    max-width: 1157px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+
   #latest-deals {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1127,8 +1346,182 @@ nav {
   }
 
   .latest-deal {
-    min-height: 250px;
-    height: 250px;
-    max-height: 250px;
+    height: 230px;
   }
+
+  .latest-deal-image {
+    width: 100%;
+    min-height: 115px;
+    height: 14vw;
+    max-height: 135px;
+    margin-bottom: 5px;
+  }
+}
+
+/****** LATEST DEALS END ******/
+
+/****** FOOTER START ******/
+
+footer {
+  margin-top: 80px;
+  width: 100%;
+  height: 258px;
+}
+
+#upper-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 91px;
+  padding-top: 42px;
+  padding-bottom: 28px;
+  background-color: rgb(19, 19, 19);
+}
+
+#upper-footer #social-icons {
+  color: rgb(85, 85, 85);
+  display: block;
+  font-size: 14px;
+  height: 45px;
+  line-height: 21px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-block-end: 21px;
+  margin-block-start: 0px;
+  margin-bottom: 21px;
+}
+
+#upper-footer #social-icons li {
+  cursor: pointer;
+  color: rgb(85, 85, 85);
+  background-color: rgb(51, 51, 51);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 2px solid rgb(51, 51, 51);
+  display: inline-block;
+  line-height: 21px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  text-align: center;
+  color: white;
+}
+
+#upper-footer #social-icons li:hover {
+  background-color: black;
+}
+
+#upper-footer #social-icons li:nth-child(3) i {
+  position: relative;
+  left: -2.5px;
+}
+
+#upper-footer #social-icons li:last-child i {
+  position: relative;
+  left: -1.5px;
+}
+
+.footer-icon i {
+  display: inline-block;
+  font-size: 16px;
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  position: relative;
+}
+
+#lower-footer {
+  padding: 39px 0;
+  height: 19px;
+  background-color: rgb(0, 0, 0);
+}
+
+#footer-links {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#footer-links li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+#footer-links li a {
+  text-decoration: none;
+  color: rgb(170, 170, 170);
+  cursor: pointer;
+  display: inline;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-stretch: 100%;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+#footer-links li a:hover {
+  color: white;
+}
+
+#lower-footer-wrapper {
+  color: rgb(170, 170, 170);
+  display: block;
+  font-family: 'Work Sans', serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-weight: 400;
+  height: 19px;
+  line-height: 19.5px;
+  margin-left: 124px;
+  margin-right: 124px;
+  max-width: 1192px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+#lower-footer-wrapper span {
+  color: rgb(170, 170, 170);
+  display: inline;
+  font-family: 'Work Sans', serif;
+  font-size: 13.5px;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+  margin: 0 3px;
+}
+
+#lower-footer-wrapper a {
+  cursor: pointer;
+  display: inline;
+  font-family: 'Work Sans', serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+}
+
+#lower-footer-wrapper a img {
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Work Sans', serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-weight: 400;
+  height: 9px;
+  line-height: 19.5px;
+  margin-right: 1px;
+  max-width: 100%;
+  text-align: center;
 }
