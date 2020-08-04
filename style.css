@@ -137,6 +137,10 @@ table {
 
 /****** CSS RESET END ******/
 
+.fa {
+  text-rendering: optimizeLegibility;
+}
+
 img {
   max-width: 100%;
   height: auto;
