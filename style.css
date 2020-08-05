@@ -1417,7 +1417,7 @@ footer {
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
-  margin-left: 8px;
+  margin: 0 4px;
   padding: 12px;
   text-align: center;
   color: white;
