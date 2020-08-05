@@ -1396,14 +1396,10 @@ footer {
 #upper-footer #social-icons {
   color: rgb(85, 85, 85);
   display: flex;
-  font-size: 14px;
-  height: 45px;
-  line-height: 21px;
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
   margin-block-end: 21px;
-  margin-block-start: 0px;
   margin-bottom: 21px;
 }
 
@@ -1423,10 +1419,7 @@ footer {
   list-style-type: none;
   margin-left: 8px;
   margin-right: 8px;
-  padding-bottom: 12px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 12px;
+  padding: 12px;
   text-align: center;
   color: white;
 }
