@@ -141,6 +141,10 @@ table {
   text-rendering: optimizeLegibility;
 }
 
+.fa::before {
+  font-family: FontAwesome;
+}
+
 img {
   max-width: 100%;
   height: auto;
